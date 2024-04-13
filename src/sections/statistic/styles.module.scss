@@ -1,0 +1,120 @@
+.container {
+  height: 100vh;
+  background-color: $black;
+
+  & .title {
+    color: $white;
+    white-space: pre-wrap;
+  }
+
+  & .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@include desktop-lg {
+  .container {
+    height: calc(100vh - $grid-desktop-large-margin / 2);
+    padding: calc($grid-desktop-large-margin / 4) $grid-desktop-large-margin;
+
+    & .title {
+      font-size: $point-5;
+      line-height: calc($point-5);
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    & .wrapper {
+      justify-content: space-between;
+      align-items: stretch;
+      gap: $point-3;
+      margin-top: $point-4;
+      margin-bottom: auto;
+    }
+  }
+}
+
+@include desktop {
+  .container {
+    height: calc(100vh - $grid-desktop-margin);
+    padding: calc($grid-desktop-margin / 2) $grid-desktop-margin;
+
+    & .title {
+      font-size: $point-4;
+      line-height: calc($point-4);
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    & .wrapper {
+      justify-content: space-between;
+      align-items: stretch;
+      gap: $point-3;
+      flex-direction: column;
+      margin-top: $point-4;
+      margin-bottom: auto;
+      height: calc(100% - $point-8);
+
+      & .item {
+        flex: 1 1 0;
+      }
+    }
+  }
+}
+
+@include tablet {
+  .container {
+    height: calc(100vh - $grid-tablet-margin * 2);
+    padding: $grid-tablet-margin;
+
+    & .title {
+      font-size: $point-3;
+      line-height: calc($point-3);
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    & .wrapper {
+      justify-content: space-between;
+      align-items: stretch;
+      gap: $point-2;
+      flex-direction: column;
+      margin-top: $point-4;
+      margin-bottom: auto;
+      height: calc(100% - $point-8);
+
+      & .item {
+        flex: 1 1 0;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .container {
+    height: calc(100vh - $grid-mobile-margin * 2);
+    padding: $grid-mobile-margin;
+
+    & .title {
+      font-size: $point-3;
+      line-height: calc($point-3);
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    & .wrapper {
+      justify-content: space-between;
+      align-items: stretch;
+      flex-direction: column;
+      gap: $point-2;
+      margin-top: $point-3;
+      height: calc(100% - $point-8);
+
+      & .item {
+        flex: 1 1 0;
+      }
+    }
+  }
+}

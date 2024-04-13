@@ -1,0 +1,140 @@
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+
+  & .wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+
+    & .vector {
+      display: none;
+    }
+  }
+
+  & .title {
+    color: $black;
+    font-weight: 500;
+
+    & > strong {
+      font-weight: 700 !important;
+    }
+  }
+
+  & .desktopVector {
+    display: block;
+  }
+
+  & .buttons {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+
+    & > button {
+      width: 100%;
+    }
+  }
+}
+
+@include desktop-lg {
+  .container {
+    justify-content: space-between;
+    margin-inline: $grid-desktop-large-margin;
+
+    & .wrapper {
+      gap: $point-4;
+      max-width: 450px;
+    }
+
+    & .title {
+      font-size: $point-8;
+      line-height: calcLineHeight($point-8);
+    }
+
+    & .buttons {
+      gap: $point-2;
+    }
+  }
+}
+
+@include desktop {
+  .container {
+    justify-content: space-between;
+    margin-inline: $grid-desktop-margin;
+
+    & .wrapper {
+      gap: $point-4;
+      max-width: 320px;
+    }
+
+    & .title {
+      font-size: $point-6;
+      line-height: calcLineHeight($point-6);
+    }
+
+    & .buttons {
+      gap: $point-2;
+    }
+  }
+}
+
+@include tablet {
+  .container {
+    justify-content: space-between;
+    margin-inline: $grid-tablet-margin;
+
+    & .wrapper {
+      gap: $point-4;
+      max-width: 320px;
+    }
+
+    & .title {
+      font-size: $point-5;
+      line-height: calcLineHeight($point-5);
+    }
+
+    & .buttons {
+      gap: $point-2;
+    }
+  }
+}
+
+@include mobile {
+  .container {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: $grid-mobile-margin;
+    gap: $point-4;
+    height: calc(100vh - $grid-mobile-margin * 2);
+
+    & .wrapper {
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+
+      & .vector {
+        margin-block: auto;
+        display: block;
+      }
+    }
+
+    & .title {
+      font-size: $point-6;
+      line-height: calcLineHeight($point-6);
+    }
+
+    & .desktopVector {
+      display: none;
+    }
+
+    & .buttons {
+      gap: $point-2;
+      margin-top: auto;
+    }
+  }
+}

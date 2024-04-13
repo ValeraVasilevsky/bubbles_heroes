@@ -1,0 +1,188 @@
+.container {
+  position: relative;
+  width: calc(100% - 2px);
+
+  & .carousel {
+    & .img {
+      border: 1px solid $black;
+      border-radius: 50%;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      aspect-ratio: 1 / 1;
+      background-color: transparent;
+      overflow: hidden;
+
+      & > img {
+        mask-image: inherit;
+        object-fit: contain;
+      }
+
+      & .wrapper {
+        & .title {
+          font-weight: 600;
+          color: $black;
+        }
+
+        & .description {
+          color: $black-80;
+        }
+      }
+    }
+  }
+
+  & .navigation {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: $point-2;
+
+    & .prev,
+    & .next {
+      cursor: pointer;
+    }
+
+    & .prev {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+@include desktop-lg {
+  .container {
+    margin-top: $point-3;
+
+    & .carousel {
+      & .img {
+        & > img {
+          width: 450px;
+          z-index: -1;
+        }
+      }
+
+      & .wrapper {
+        margin-top: $point;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        gap: $point;
+
+        & .title {
+          font-size: $point-4;
+          line-height: calcLineHeight($point-4);
+        }
+
+        & .description {
+          font-size: $point-3;
+          line-height: calcLineHeight($point-3);
+        }
+      }
+    }
+  }
+}
+
+@include desktop {
+  .container {
+    margin-top: $point-3;
+
+    & .carousel {
+      & .img {
+        & > img {
+          width: 350px;
+          z-index: -1;
+        }
+      }
+
+      & .wrapper {
+        margin-top: $point;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        gap: $point;
+
+        & .title {
+          font-size: $point-4;
+          line-height: calcLineHeight($point-4);
+        }
+
+        & .description {
+          font-size: $point-3;
+          line-height: calcLineHeight($point-3);
+        }
+      }
+    }
+  }
+}
+
+@include tablet {
+  .container {
+    margin-top: $point-3;
+
+    & .carousel {
+      & .img {
+        & > img {
+          width: 350px;
+          z-index: -1;
+        }
+      }
+
+      & .wrapper {
+        margin-top: $point;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        gap: $point;
+
+        & .title {
+          font-size: $point-4;
+          line-height: calcLineHeight($point-4);
+        }
+
+        & .description {
+          font-size: $point-3;
+          line-height: calcLineHeight($point-3);
+        }
+      }
+    }
+  }
+}
+
+@include mobile {
+  .container {
+    margin-top: $point-3;
+
+    & .carousel {
+      & .img {
+        & > img {
+          width: 350px;
+          z-index: -1;
+        }
+      }
+
+      & .wrapper {
+        margin-top: $point;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        gap: $point;
+
+        & .title {
+          font-size: $point-4;
+          line-height: calcLineHeight($point-4);
+        }
+
+        & .description {
+          font-size: $point-3;
+          line-height: calcLineHeight($point-3);
+        }
+      }
+    }
+  }
+}

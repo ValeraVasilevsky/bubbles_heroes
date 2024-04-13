@@ -1,0 +1,14 @@
+.header {
+  position: sticky;
+  inset: 0;
+  width: calc(100% - $point-2);
+  padding: $point;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  & .wallet {
+    margin-left: auto;
+  }
+}

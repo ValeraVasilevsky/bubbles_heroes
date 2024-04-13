@@ -1,0 +1,76 @@
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & .wrapper {
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+  }
+
+  & .vector {
+    & > svg {
+      height: auto;
+      will-change: transform, clip-path, path, position, all;
+    }
+  }
+}
+
+@include desktop-lg {
+  .container {
+    & .img {
+      width: 450px;
+    }
+
+    & .vector {
+      & > svg {
+        width: 450px;
+        display: inline-block;
+      }
+    }
+  }
+}
+
+@include desktop {
+  .container {
+    & .img {
+      width: 400px;
+    }
+
+    & .vector {
+      & > svg {
+        width: 400px;
+      }
+    }
+  }
+}
+
+@include tablet {
+  .container {
+    & .img {
+      width: 300px;
+    }
+
+    & .vector {
+      & > svg {
+        width: 300px;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .container {
+    & .img {
+      width: 300px;
+    }
+
+    & .vector {
+      & > svg {
+        width: 300px;
+      }
+    }
+  }
+}

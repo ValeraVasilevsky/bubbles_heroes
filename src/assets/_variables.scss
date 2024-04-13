@@ -1,0 +1,81 @@
+// colors
+$black: #1f1f1f;
+$white: #f9f9f9;
+$pink: #ffa3d4;
+
+$black-80: rgba(39, 39, 39, 0.8);
+$white-80: rgba(249, 249, 249, 0.8);
+
+$shadow: 0px 8px 20px 1px rgba(0, 0, 0, 0.25);
+
+// spacing
+$point: 8px;
+$point-2: 16px;
+$point-3: 24px;
+$point-4: 32px;
+$point-5: 40px;
+$point-6: 48px;
+$point-7: 56px;
+$point-8: 64px;
+
+// grid
+$grid-desktop: repeat(12, 1fr);
+$grid-desktop-gap: 20px;
+$grid-desktop-large-margin: 224px;
+$grid-desktop-margin: 128px;
+
+$grid-tablet: repeat(8, 1fr);
+$grid-tablet-gap: 16px;
+$grid-tablet-margin: 40px;
+
+$grid-mobile: repeat(6, 1fr);
+$grid-mobile-gap: 16px;
+$grid-mobile-margin: 24px;
+
+// functions
+@function calcLineHeight($font-size) {
+  @return $font-size + 0.5px;
+}
+
+// media
+$desktop-large: 1440px;
+$desktop: 1024px;
+$tablet: 768px;
+$mobile: 320px;
+
+// mixins
+@mixin desktop-lg {
+  @media screen and (min-width: $desktop-large) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $desktop) and (max-width: 1339px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: $tablet) and (max-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (min-width: $mobile) and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin hover {
+  @media screen and (hover: hover) {
+    @content;
+  }
+}
+
+@mixin no-hover {
+  @media screen and (hover: none) {
+    @content;
+  }
+}

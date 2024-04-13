@@ -1,0 +1,62 @@
+.container {
+  position: absolute;
+  height: 100vh;
+  inset: 0;
+  justify-content: center;
+  display: inline-flex;
+  flex-direction: row;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.center {
+  justify-content: center;
+}
+
+.opacity {
+  opacity: 0.5;
+}
+
+.blur {
+  filter: blur(50px);
+}
+
+.one {
+  position: relative;
+  border-radius: 50%;
+}
+
+.one {
+  animation: one 15s infinite;
+  color: $pink;
+}
+
+@include desktop {
+  .one {
+    width: 600px;
+    height: 600px;
+  }
+}
+
+@keyframes one {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    left: 30%;
+    top: 30%;
+  }
+  50% {
+    left: 20%;
+    top: -10%;
+  }
+  75% {
+    left: -20%;
+    top: 10%;
+  }
+  100% {
+    left: 0px;
+    top: 0px;
+  }
+}

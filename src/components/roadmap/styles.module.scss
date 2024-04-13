@@ -1,0 +1,197 @@
+.container {
+  & .item {
+    & .wrapper {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: $point-2;
+
+      & .circle {
+        border-radius: 50%;
+        background-color: $white;
+
+        &.done {
+          background-color: $pink;
+        }
+      }
+
+      & .percent {
+        color: $white;
+        font-weight: 600;
+      }
+    }
+
+    & .texts {
+      border-left: 2px solid $white;
+
+      &.done {
+        border-left-color: $pink;
+      }
+
+      & .description {
+        color: $white;
+        font-weight: 500;
+
+        & .link {
+          position: relative;
+          color: $pink;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+@include desktop-lg {
+  .container {
+    margin-top: $point-3;
+
+    & .item {
+      margin-top: $point-2;
+
+      & .wrapper {
+        gap: $point-2;
+
+        & .circle {
+          width: $point-5;
+          height: $point-5;
+        }
+
+        & .percent {
+          font-size: $point-5;
+          line-height: calcLineHeight($point-5);
+        }
+      }
+
+      & .texts {
+        margin-left: 19px;
+        width: calc(100% - 21px - $point-2);
+        padding-left: $point-2;
+        margin-top: $point-2;
+
+        & .description {
+          font-size: $point-4;
+          line-height: $point-4;
+        }
+      }
+    }
+  }
+}
+
+@include desktop {
+  .container {
+    margin-top: $point-3;
+
+    & .item {
+      margin-top: $point-2;
+
+      & .wrapper {
+        gap: $point-2;
+
+        & .circle {
+          width: $point-4;
+          height: $point-4;
+        }
+
+        & .percent {
+          font-size: $point-4;
+          line-height: calcLineHeight($point-4);
+        }
+      }
+
+      & .texts {
+        margin-left: 16px;
+        width: calc(100% - 18px - $point-2);
+        padding-left: $point-2;
+        margin-top: $point-2;
+
+        & .description {
+          font-size: $point-3;
+          line-height: $point-3;
+        }
+      }
+    }
+  }
+}
+
+@include tablet {
+  .container {
+    margin-top: $point-3;
+
+    & .item {
+      &:not(:first-child) {
+        margin-top: $point-2;
+      }
+
+      & .wrapper {
+        gap: $point-2;
+
+        & .circle {
+          width: $point-3;
+          height: $point-3;
+        }
+
+        & .percent {
+          font-size: $point-3;
+          line-height: calcLineHeight($point-3);
+        }
+      }
+
+      & .texts {
+        margin-left: 11px;
+        width: calc(100% - 13px - $point-2);
+        padding-left: $point-2;
+        margin-top: $point-2;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .container {
+    margin-top: $point-3;
+
+    & .item {
+      &:not(:first-child) {
+        margin-top: $point-2;
+      }
+
+      & .wrapper {
+        gap: $point-2;
+
+        & .circle {
+          width: $point-3;
+          height: $point-3;
+        }
+
+        & .percent {
+          font-size: $point-3;
+          line-height: calcLineHeight($point-3);
+        }
+      }
+
+      & .texts {
+        margin-left: 11px;
+        width: calc(100% - 13px - $point-2);
+        padding-left: $point-2;
+        margin-top: $point-2;
+      }
+    }
+  }
+}
+
+@include hover {
+  .container {
+    & .item {
+      & .texts {
+        & .description {
+          & > a {
+            &:hover {
+              border-bottom-width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

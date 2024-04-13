@@ -1,0 +1,55 @@
+.container {
+  background-color: $white;
+
+  & .title {
+    color: $black;
+    text-transform: uppercase;
+    text-align: center;
+  }
+}
+
+@include desktop-lg {
+  .container {
+    padding: calc($grid-desktop-large-margin / 4) $grid-desktop-large-margin;
+    height: auto;
+
+    & .title {
+      font-size: $point-5;
+      line-height: calc($point-5);
+    }
+  }
+}
+
+@include desktop {
+  .container {
+    padding: calc($grid-desktop-margin / 2) $grid-desktop-margin;
+    height: auto;
+
+    & .title {
+      font-size: $point-4;
+      line-height: calc($point-4);
+    }
+  }
+}
+
+@include tablet {
+  .container {
+    padding: $grid-tablet-margin;
+
+    & .title {
+      font-size: $point-3;
+      line-height: calc($point-3);
+    }
+  }
+}
+
+@include mobile {
+  .container {
+    padding: $grid-mobile-margin;
+
+    & .title {
+      font-size: $point-3;
+      line-height: calc($point-3);
+    }
+  }
+}

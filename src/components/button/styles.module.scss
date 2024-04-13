@@ -1,0 +1,95 @@
+.button {
+  border-radius: $point-5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  will-change: background-color, color, box-shadow;
+  transition: 0.3s;
+
+  &.primary {
+    background-color: $black;
+    color: $white;
+
+    & > svg {
+      color: $white;
+    }
+
+    &:active {
+      background-color: $black-80;
+      color: $white-80;
+
+      & > svg {
+        color: $white-80;
+      }
+    }
+  }
+
+  &.accent {
+    background-color: $pink;
+    color: $white;
+
+    & > svg {
+      color: $white;
+    }
+  }
+
+  &.flat {
+    background: none;
+    color: $black;
+
+    &:active {
+      color: $black-80;
+    }
+  }
+}
+
+@include desktop-lg {
+  .button {
+    font-size: $point-3;
+    line-height: calcLineHeight($point-3);
+    gap: $point-2;
+    padding: $point-2 $point-3;
+  }
+}
+
+@include desktop {
+  .button {
+    font-size: $point-2;
+    line-height: calcLineHeight($point-2);
+    gap: $point-2;
+    padding: $point-2 $point-3;
+  }
+}
+
+@include tablet {
+  .button {
+    font-size: $point-2;
+    line-height: calcLineHeight($point-2);
+    gap: $point-2;
+    padding: $point-2 $point-3;
+  }
+}
+
+@include mobile {
+  .button {
+    font-size: $point-2;
+    line-height: calcLineHeight($point-2);
+    gap: $point-2;
+    padding: $point-2 $point-3;
+  }
+}
+
+@include hover {
+  .button {
+    &.primary {
+      &:hover {
+        box-shadow: $shadow;
+      }
+    }
+  }
+}

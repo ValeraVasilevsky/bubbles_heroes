@@ -1,0 +1,107 @@
+.container {
+  width: 100%;
+  border: 2px solid $white-80;
+  border-radius: $point-4;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: $point-2;
+
+  & .title {
+    color: $white;
+    font-weight: 600;
+  }
+
+  & .description {
+    color: $white-80;
+    font-weight: 400;
+    text-align: center;
+  }
+}
+
+@include tablet {
+  .container {
+    width: calc(100% - $point-2 * 2);
+    padding: $point-2;
+
+    & .title {
+      font-size: $point-4;
+      line-height: calcLineHeight($point-4);
+    }
+
+    & .description {
+      font-size: $point-3;
+      line-height: calcLineHeight($point-3);
+    }
+  }
+}
+
+@include desktop-lg {
+  .container {
+    width: calc(100% - $point-2 * 2);
+    padding: $point-2;
+
+    & .title {
+      font-size: $point-4;
+      line-height: calcLineHeight($point-4);
+    }
+
+    & .description {
+      font-size: $point-3;
+      line-height: calcLineHeight($point-3);
+    }
+  }
+}
+
+@include desktop {
+  .container {
+    width: calc(100% - $point-2 * 2);
+    padding: $point-2;
+
+    & .title {
+      font-size: $point-4;
+      line-height: calcLineHeight($point-4);
+    }
+
+    & .description {
+      font-size: $point-3;
+      line-height: calcLineHeight($point-3);
+    }
+  }
+}
+
+@include tablet {
+  .container {
+    width: calc(100% - $point-2 * 2);
+    padding: $point-2;
+
+    & .title {
+      font-size: $point-4;
+      line-height: calcLineHeight($point-4);
+    }
+
+    & .description {
+      font-size: $point-3;
+      line-height: calcLineHeight($point-3);
+    }
+  }
+}
+
+@include mobile {
+  .container {
+    width: calc(100% - $point-2 * 2);
+    padding: $point-2;
+
+    & .title {
+      font-size: $point-4;
+      line-height: calcLineHeight($point-4);
+    }
+
+    & .description {
+      font-size: $point-3;
+      line-height: calcLineHeight($point-3);
+    }
+  }
+}
