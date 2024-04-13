@@ -3,18 +3,18 @@
 </template>
 
 <script setup lang="ts">
-import { TonConnectUI, TonConnectUIError } from "@tonconnect/ui";
+import { TonConnectUI } from "@tonconnect/ui";
 
 import { onMounted, ref } from "vue";
 
 // constants
 const tonConnectUi = ref<TonConnectUI | null>(null);
-const tonConnectUiError = ref<TonConnectUIError | null>(null);
 
 // methods
 const initWallet = async (): Promise<void> => {
   tonConnectUi.value = new TonConnectUI({
-    manifestUrl: "http://locahost:3000/manifest", //`https://eager-eagles-guess.loca.lt/wallet/manifest`,
+    manifestUrl:
+      "https://valeravasilevsky.github.io/bubbles_heroes/tonconnect-manifest.json", //`https://eager-eagles-guess.loca.lt/wallet/manifest`,
     buttonRootId: "ton-connect",
   });
 };
