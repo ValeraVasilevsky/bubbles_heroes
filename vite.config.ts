@@ -61,5 +61,5 @@ export default defineConfig({
     port: 8080,
   },
 
-  base: "/",
+  base: "/bubbles_heroes/",
 });
