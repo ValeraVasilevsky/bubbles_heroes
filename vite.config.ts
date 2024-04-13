@@ -42,9 +42,7 @@ export default defineConfig({
       },
       {
         find: "sections",
-        replacement: fileURLToPath(
-          new URL("./src/sections", import.meta.url)
-        ),
+        replacement: fileURLToPath(new URL("./src/sections", import.meta.url)),
       },
     ],
   },
@@ -62,4 +60,6 @@ export default defineConfig({
   server: {
     port: 8080,
   },
+
+  base: "/",
 });
