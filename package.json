@@ -12,6 +12,7 @@
     "@tonconnect/sdk": "^3.0.0",
     "@tonconnect/ui": "^2.0.0",
     "animejs": "^3.2.2",
+    "pinia": "^2.1.7",
     "swiper": "^11.1.0",
     "vue": "^3.4.21"
   },

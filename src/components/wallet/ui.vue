@@ -1,31 +1,21 @@
 <template>
-  <div id="ton-connect" @click="openModal" />
+  <div id="ton-connect" @click="walletStore.openModal" />
 </template>
 
 <script setup lang="ts">
-import { TonConnectUI } from "@tonconnect/ui";
+import { useWalletStore } from "./model";
 
-import { onMounted, ref } from "vue";
+import { onMounted, onUnmounted, ref } from "vue";
 
 // constants
-const tonConnectUi = ref<TonConnectUI | null>(null);
+const walletStore = useWalletStore();
 
-// methods
-const initWallet = async (): Promise<void> => {
-  tonConnectUi.value = new TonConnectUI({
-    manifestUrl:
-      "https://valeravasilevsky.github.io/bubbles_heroes/tonconnect-manifest.json",
-    buttonRootId: "ton-connect",
-  });
-};
-
-const openModal = (): void => {
-  if (!tonConnectUi.value) return;
-
-  tonConnectUi.value.openModal();
-};
-
+// hooks
 onMounted(() => {
-  initWallet();
+  walletStore.init();
+});
+
+onUnmounted(() => {
+  walletStore.onDisconnect();
 });
 </script>
