@@ -5,7 +5,7 @@
 <script setup lang="ts">
 import { useWalletStore } from "./model";
 
-import { onMounted, onUnmounted, ref } from "vue";
+import { onMounted, onUnmounted } from "vue";
 
 // constants
 const walletStore = useWalletStore();
